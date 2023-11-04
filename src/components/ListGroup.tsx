@@ -2,7 +2,6 @@
 
 function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-  items = [];
 
 
   // deduplicationg previous code
@@ -13,7 +12,7 @@ function ListGroup() {
       <ul className="list-group">
         {items.map((item) => (
           // in an API -> item.id
-          <li key={item}>{item}</li>
+          <li className="list-group-item" key={item}>{item}</li>
         ))}
       </ul>
     </>
