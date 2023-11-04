@@ -1,11 +1,10 @@
 // import { Fragment } from "react";
-import { MouseEvent } from "react";
+
+import { useState } from "react";
 
 function ListGroup() {
   let items = ["New York", "San Francisco", "Tokyo", "London", "Paris"];
-
-  // Event handler
-  const handleClick = (event: MouseEvent) => console.log(event);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   // deduplicationg previous code
   return (
@@ -16,9 +15,9 @@ function ListGroup() {
         {items.map((item, index) => (
           // in an API -> item.id
           <li
-            className="list-group-item"
+            className={selectedIndex === index ? 'list-group-item active' : 'list-group-item'}
             key={item}
-            onClick={handleClick}
+            onClick={() => { setSelectedIndex(index);}}
           >
             {item}
           </li>
