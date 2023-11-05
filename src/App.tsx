@@ -7,7 +7,7 @@ function App(){
       <Alert>
         Hello <span>World</span>
       </Alert>
-      <Button />
+      <Button>My Button</Button>
     </div>
   );
 }
